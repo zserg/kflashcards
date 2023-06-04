@@ -17,7 +17,8 @@ class FlashcardsService {
     private lateinit var notepadUrl: String
 
     fun getFlashcard(): Flashcard? {
-        return restTemplate.getForObject(notepadUrl, Flashcard::class.java)
+        val result = restTemplate.getForObject(notepadUrl, Flashcard::class.java)
+        return result
     }
 
 
